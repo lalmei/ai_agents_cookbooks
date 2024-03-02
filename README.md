@@ -10,3 +10,6 @@ Prereqs:
 ## Team MealLink Dataset
 
 https://public.tableau.com/app/profile/city.of.seattle.human.services/viz/Covid-19Seattle-AreaEmergencyFoodResources/InfoPage
+
+
+https://docs.google.com/presentation/d/15W7Ov_wPdNJVyrT3v_PFNVodFJks9TT9QA5DJ0N2-AY/edit?usp=sharing

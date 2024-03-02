@@ -1,18 +1,20 @@
 <script>
-    // Set up google maps
-    let map;
-    let markers = [];
-    let infoWindow;
-    let bounds;
-    let mapOptions = {
-        center: { lat: 0, lng: 0 },
-        zoom: 2,
-        mapTypeId: 'roadmap',
-    };
-
+	import Map from './Map.svelte';
+	export let ready;
 </script>
 
-<!-- Set up map -->
+<svelte:head>
+	<script defer async
+	src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+	</script>
+</svelte:head>
 
-<div id="map" bind:this={map} style="height: 100vh; width: 100%;">
-</div>
+<style>
+    :global(body) {
+        padding: 0;
+    }
+</style>
+
+{ #if ready }
+    <Map></Map>
+{ /if }

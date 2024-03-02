@@ -12,6 +12,10 @@
     <label for="age">Age</label>
     <input type="number" id="age" name="age" bind:value={formData.age}>
 
+    <!-- Phone number -->
+    <label for="phone-number">Phone number</label>
+    <input type="text" id="phone-number" name="phone-number" bind:value={formData.phoneNumber}>
+
     <!-- Language Dropdown -->
     <label for="language">Language</label>
     <select id="language" name="language" bind:value={formData.language}>
@@ -53,23 +57,6 @@
         <option value="faroese">Faroese</option>
     </select>
 
-    <!-- Dietary Restriction -->
-    <label for="diet">Dietary Restriction</label>
-    <select id="diet" name="diet" bind:value={formData.diet}>
-        <option value="none">None</option>
-        <option value="vegetarian">Vegetarian</option>
-        <option value="vegan">Vegan</option>
-        <option value="pescatarian">Pescatarian</option>
-        <option value="gluten-free">Gluten-Free</option>
-        <option value="dairy-free">Dairy-Free</option>
-        <option value="nut-free">Nut-Free</option>
-        <option value="soy-free">Soy-Free</option>
-        <option value="egg-free">Egg-Free</option>
-        <option value="shellfish-free">Shellfish-Free</option>
-        <option value="kosher">Kosher</option>
-        <option value="halal">Halal</option>
-    </select>
-
     <!-- Commute -->
     <label for="commute">Commute</label>
     <select id="commute" name="commute" bind:value={formData.commute}>
@@ -93,22 +80,6 @@
     <!-- Family Size -->
     <label for="family">Family Size</label>
     <input type="number" id="family" name="family" bind:value={formData.family}>
-
-    <!-- Desired visit time checkboxes -->
-    <label for="time">Desired Visit Time</label>
-
-    <input type="checkbox" id="morning" name="morning" value="morning" bind:checked={formData.morning}>
-    <label for="morning">Morning</label>
-
-    <input type="checkbox" id="afternoon" name="afternoon" value="afternoon" bind:checked={formData.afternoon}>
-    <label for="afternoon">Afternoon</label>
-
-    <input type="checkbox" id="evening" name="evening" value="evening" bind:checked={formData.evening}>
-    <label for="evening">Evening</label>
-
-    <input type="checkbox" id="overnight" name="overnight" value="overnight" bind:checked={formData.overnight}>
-    <label for="overnight">Overnight</label>
-
 
     <!-- Desired visit day checkboxes -->
     <label for="day">Desired Visit Day</label>

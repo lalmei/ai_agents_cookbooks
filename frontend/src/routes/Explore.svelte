@@ -36,10 +36,27 @@
     // Create a variable to be mutated by a child component
     let formData = {}
 
-    function handleSubmit(event) {
+    async function handleSubmit(event) {
         event.preventDefault();
-        console.log(formData);
-        nextStep();
+
+        let formText = "Please provide food resources that match the following criteria\n"
+        for (const [key, value] of Object.entries(formData)) {
+            formText += `${key}: ${value}\n`
+        }
+
+        // Send the form data to the server at the /formsubmit endpoint
+        fetch('/formsubmit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                nextStep();
+            });
     }
 </script>
 
@@ -55,7 +72,6 @@
         <IntroForm bind:formData={formData} handleSubmit={handleSubmit}/>
 
         <button on:click={prevStep}>Previous</button>
-        <button on:click={nextStep}>Next</button>
     {:else}
         <p>Done!</p>
         <button on:click={prevStep}>Previous</button>
